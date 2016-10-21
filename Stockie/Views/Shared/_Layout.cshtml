@@ -9,7 +9,36 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+	<nav scroll-y-offset-element="scroll-y-offset-element" class="main-nav l-pinned-top l-layer-5">
+		<ul>
+			<li class="l-left">
+				<a class="main-nav-button md-button md-ink-ripple" href="/features.html" md-button="">
+					<span class="ng-scope">Features</span>
+				</a>
+			</li>
+			<li class="l-left">
+				<a class="main-nav-button md-button md-ink-ripple" href="/docs/ts/latest/">
+					<span class="ng-scope">Docs</span>
+				</a>
+			</li>
+			<li class="l-left">
+				<a class="main-nav-button md-button md-ink-ripple" href="/events.html">
+					<span class="ng-scope">Events</span>
+				</a>
+			</li>
+			<li class="l-left">
+				<a class="main-nav-button md-button md-ink-ripple" href="/news.html">
+					<span class="ng-scope">News</span>
+				</a>
+			</li>
+			<li class="l-right">
+				<a class="main-nav-button md-button md-ink-ripple" href="/docs/ts/latest/quickstart.html">
+					<span class="ng-scope">Get Started</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+    @*<div class="navbar navbar-theme navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -28,14 +57,25 @@
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
-    <div class="container body-content">
+    </div>*@
+	<div class="main-footer">
+		@RenderBody()
+		<nav class="background-midnight grid-fluid">
+			<div class="c3 main-footer-branding">
+				<div class="logo-inverse-large"></div>
+			</div>
+		</nav>
+		<footer class="background-midnight">
+			<small class="text-caption">&copy; @DateTime.Now.Year - My ASP.NET Application</small>
+		</footer>
+	</div>
+    @*<div class="body-footer background-midnight">
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
-    </div>
+    </div>*@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

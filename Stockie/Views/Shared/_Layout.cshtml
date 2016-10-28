@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-<html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,73 +9,93 @@
 </head>
 <body>
 	<nav scroll-y-offset-element="scroll-y-offset-element" class="main-nav l-pinned-top l-layer-5">
-		<ul>
+		<button class="main-nav-button main-nav-mobile-trigger l-right md-button md-ink-ripple" type="button" ng-transclude="" aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button">
+			<span class="ng-scope">Site Menu </span>
+			<span class="icon icon-arrow-drop-down ng-scope"></span>
+			<div class="md-ripple-container"></div>
+		</button>
+		<ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''">
 			<li class="l-left">
-				<a class="main-nav-button md-button md-ink-ripple" href="/features.html" md-button="">
-					<span class="ng-scope">Features</span>
-				</a>
+				@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "main-nav-button md-button md-ink-ripple ng-scope"})
 			</li>
-			<li class="l-left">
-				<a class="main-nav-button md-button md-ink-ripple" href="/docs/ts/latest/">
-					<span class="ng-scope">Docs</span>
-				</a>
-			</li>
-			<li class="l-left">
-				<a class="main-nav-button md-button md-ink-ripple" href="/events.html">
-					<span class="ng-scope">Events</span>
-				</a>
-			</li>
-			<li class="l-left">
-				<a class="main-nav-button md-button md-ink-ripple" href="/news.html">
-					<span class="ng-scope">News</span>
-				</a>
-			</li>
-			<li class="l-right">
-				<a class="main-nav-button md-button md-ink-ripple" href="/docs/ts/latest/quickstart.html">
-					<span class="ng-scope">Get Started</span>
-				</a>
-			</li>
+
+			@Html.Partial("_LoginPartial")
+
 		</ul>
 	</nav>
-    @*<div class="navbar navbar-theme navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>*@
+
+	@RenderBody()
 
 	<div class="main-footer">
-		@RenderBody()
 		<nav class="background-midnight grid-fluid">
 			<div class="c3 main-footer-branding">
 				<div class="logo-inverse-large"></div>
 			</div>
+			<div class="c2">
+				<h3 class="text-headline">RESOURCES</h3>
+				<ul class="text-body">
+					<li>
+						<a href="/about/">About</a>
+					</li>
+					<li>
+						<a href="/resources/">Books &amp; Training</a>
+					</li>
+					<li>
+						<a href="/resources/">Tools &amp; Libraries</a>
+					</li>
+					<li>
+						<a href="/resources/">Community</a>
+					</li>
+					<li>
+						<a href="/presskit.html">Press Kit</a>
+					</li>
+				</ul>
+			</div>
+			<div class="c2">
+				<h3 class="text-headline">HELP</h3>
+				<ul class="text-body">
+					<li>
+						<a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a>
+					</li>
+					<li>
+						<a href="https://gitter.im/angular/angular">Gitter</a>
+					</li>
+					<li>
+						<a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a>
+					</li>
+					<li>
+						<a href="https://github.com/angular/angular/issues"> Report Issues</a>
+					</li>
+					<li>
+						<a class="footer-feedback" aria-label="Submit feedback on this page"> Site Feedback</a>
+					</li>
+				</ul>
+			</div>
+			<div class="c2">
+				<h3 class="text-headline">COMMUNITY</h3>
+				<ul class="text-body">
+					<li>
+						<a href="/events.html">Events</a>
+					</li>
+					<li>
+						<a href="http://www.meetup.com/topics/angularjs/">Meetups</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/angularjs"> Twitter</a>
+					</li>
+					<li>
+						<a href="https://github.com/angular/angular"> GitHub</a>
+					</li>
+					<li>
+						<a href="/contribute.html"> Contribute</a>
+					</li>
+				</ul>
+			</div>
 		</nav>
 		<footer class="background-midnight">
-			<small class="text-caption">&copy; @DateTime.Now.Year - My ASP.NET Application</small>
+			<small class="text-caption">&copy; @DateTime.Now.Year - Stockie</small>
 		</footer>
 	</div>
-    @*<div class="body-footer background-midnight">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>*@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

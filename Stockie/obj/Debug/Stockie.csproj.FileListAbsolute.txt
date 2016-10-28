@@ -79,4 +79,3 @@ C:\Users\163260\Documents\Stockie_New\Stockie\bin\Microsoft.Owin.Security.Twitte
 C:\Users\163260\Documents\Stockie_New\Stockie\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\163260\Documents\Stockie_New\Stockie\obj\Debug\Stockie.dll
 C:\Users\163260\Documents\Stockie_New\Stockie\obj\Debug\Stockie.pdb
-C:\Users\163260\Documents\Stockie_New\Stockie\obj\Debug\Stockie.csprojResolveAssemblyReference.cache

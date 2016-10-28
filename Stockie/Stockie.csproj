@@ -219,12 +219,21 @@
     <Compile Include="Models\AspNetUserLogin.cs">
       <DependentUpon>Stockie.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>Stockie.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PaymentCard.cs">
       <DependentUpon>Stockie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PaymentOption.cs">
+      <DependentUpon>Stockie.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Stockie.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
       <DependentUpon>Stockie.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Stockie.Context.cs">
@@ -261,8 +270,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\icomoon\style.css" />
     <Content Include="Content\main.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

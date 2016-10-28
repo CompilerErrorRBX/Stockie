@@ -7,8 +7,8 @@
       <Diagram DiagramId="c24d0f600e414e3cbd12d35abbd6abf2" Name="Diagram1">
         <EntityTypeShape EntityType="stockieModel.Address" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="stockieModel.AspNetRole" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="stockieModel.AspNetUserClaim" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="stockieModel.AspNetUserLogin" Width="1.5" PointX="7.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="stockieModel.AspNetUserClaim" Width="1.5" PointX="7.875" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="stockieModel.AspNetUserLogin" Width="2" PointX="7.5" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="stockieModel.AspNetUser" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="stockieModel.PaymentCard" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="stockieModel.PaymentOption" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
@@ -27,7 +27,8 @@
         <AssociationConnector Association="stockieModel.FK_PaymentOption_PaymentCard" ManuallyRouted="false" />
         <AssociationConnector Association="stockieModel.FK_SubscriptionTerm_Subscription" ManuallyRouted="false" />
         <AssociationConnector Association="stockieModel.FK_UserSubscription_SubscriptionTerm" ManuallyRouted="false" />
-        <AssociationConnector Association="stockieModel.AspNetUesrRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="stockieModel.C__MigrationHistory" Width="1.5" PointX="10.375" PointY="0.75" />
+        <AssociationConnector Association="stockieModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

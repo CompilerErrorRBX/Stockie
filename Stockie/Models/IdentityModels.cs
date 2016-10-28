@@ -21,7 +21,7 @@ namespace Stockie.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("StockieEntitiesModel", throwIfV1Schema: false)
+            : base("StockieEntities", throwIfV1Schema: false)
         {
         }
 
